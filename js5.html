@@ -1,0 +1,45 @@
+<script>
+    function myfun(callback){
+        callback();
+    }
+    function myfun2(){
+        console.log("callback function");
+    }
+    myfun(myfun2);
+
+    function sum(a,b,callback){
+        console.log(callback(a,b));     
+    }
+    function add(c,d) {
+        console.log(c+d);
+    }
+    sum(20,30,add);
+
+    function mul(a,b,callback){
+        console.log(callback(a,b));
+    }
+    function mul1(e,f){
+        console.log(e*f);        
+    }
+    mul(20,10,mul1);
+
+
+    function evenodd(a,callback){
+        console.log(callback(a));
+    }
+    function Even(h){
+        if(h%2==0){
+            console.log("Even");
+        }else{
+            console.log("Odd");
+        }
+    }
+    evenodd(47,Even);
+
+    function greet(name,callback){
+        console.log(callback(name));   
+    }
+    function greet1(names){
+        console.log("Welcome" + names);
+    }greet("Leon",greet1);
+</script>
