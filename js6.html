@@ -1,0 +1,63 @@
+<script>
+   function largerst(arr){
+    let max = arr[0];
+    for(let i = 1;i<arr.length;i++){
+        if(arr[i]>max){
+            max = arr[i];
+        } 
+    }
+    console.log(max);  
+   }
+   largerst([20,70,90,40,100,110,10,150,80]);
+
+   function SecondLarge(arr){
+    let max = arr[0];
+    let Secmax = arr[0];
+    for(let i = 1;i<arr.length;i++){
+        if(arr[i]>max){
+            Secmax = max;
+            max = arr[i];
+        }else{
+            if(arr[i]>Secmax && arr[i]!=max){
+                Secmax = arr[i];
+            }
+        }
+    }
+    console.log(Secmax);
+   }
+    SecondLarge([20,70,90,40,100,110,10,150,80]);
+
+
+  function reverse(str){
+    let rev = "";
+    for(let i = str.length - 1;i>=0;i--){
+        rev = rev + str[i];
+    }
+    console.log(rev);
+  }
+  reverse("Leon Infant")
+
+  function Palindrome(str){
+    let rev = "";
+    for(let i  = str.length -1;i>=0;i--){
+        rev = rev +str[i];
+    }
+    if(str == rev){
+        console.log("Palindrome");
+    }else{
+        console.log("Not Palindrome");
+    }
+  }
+    Palindrome("Leon");
+    Palindrome("MoM");
+
+    function Even(num){
+        if(num%2==0){
+            console.log("Even");
+        }else{
+            console.log("Odd");
+        }
+    }
+    Even(56);
+    Even(79);
+</script>
