@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Form</title>
+</head>
+<body>
+
+<form id="signupForm">
+  <input type="text" id="name" placeholder="Enter Name"><br><br>
+  <input type="email" id="email" placeholder="Enter Email"><br><br>
+  <p id="error" style="color:red;"></p>
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+const form = document.getElementById('signupForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const errorEl = document.getElementById('error');
+
+form.addEventListener('submit', function(e) {
+  errorEl.textContent = ""; // clear previous errors
+
+  if (!nameInput.value.trim()) {
+    e.preventDefault();
+    errorEl.textContent = "Name is required";
+    return;
+  }
+
+  if (!emailInput.value.trim()) {
+    e.preventDefault();
+    errorEl.textContent = "Email is required";
+    return;
+  }
+
+  // If all fields are valid → form submits normally
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example</title>
+</head>
+<body>
+
+<h3>My List</h3>
+<ul id="list"></ul>
+
+<button onclick="addItem()">Add Item</button>
+
+<script>
+function addItem() {
+    const li = document.createElement('li');
+    li.textContent = 'New Item';
+    li.className = 'list-item';
+    document.getElementById('list').appendChild(li);
+}
+</script>
+
+</body>
+</html>
